@@ -1,5 +1,6 @@
 let sonar_distance = 0
 basic.forever(function () {
+    sonar_distance = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
     if (sonar_distance < 15) {
         cuteBot.stopcar()
         for (let index = 0; index < 4; index++) {
@@ -14,5 +15,4 @@ basic.forever(function () {
     } else {
         cuteBot.motors(50, 50)
     }
-    sonar_distance = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
 })
