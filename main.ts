@@ -8,10 +8,11 @@ basic.forever(function () {
             music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
         }
         cuteBot.motors(50, 0)
-        basic.pause(1000)
-        cuteBot.motors(50, 0)
+        basic.pause(500)
+        cuteBot.motors(0, 0)
+        basic.pause(500)
     } else {
-        cuteBot.motors(50, 0)
+        cuteBot.motors(50, 50)
     }
     sonar_distance = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
 })
